@@ -8,8 +8,7 @@ const TodoTemplate = ({children}) => {
       <div className="TodoTitle">To-do List</div>
       <div className="content">{children}</div>
     </div>
-  )
-
+  );
 
 };
 
