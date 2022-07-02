@@ -11,7 +11,7 @@ const TodoListItem = ({todo}) => {
   const {text, checked} = todo;
 
   //const text = todo.text
-  //const checked = todo.checked --> 객체 분할 구조
+  //const checked = todo.checked --> destructing 
 
   return (
     <div className='TodoListItem'>
