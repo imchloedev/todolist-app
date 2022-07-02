@@ -1,29 +1,11 @@
-@font-face {
-  font-family: "Montserrat";
-  font-weight: 300;
-  src: url("../fonts/Montserrat/static/Montserrat-Light.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Montserrat";
-  font-weight: 400;
-  src: url("../fonts/Montserrat/static/Montserrat-Regular.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Montserrat";
-  font-weight: 700;
-  src: url("../fonts/Montserrat/static/Montserrat-Bold.ttf") format("truetype");
-}
-
 
 .TodoTemplate {
   width: 80%;
   max-width: 600px;
   min-width: 300px;
   height: 500px;
-  background-color: #eee;
-  border-radius: 20px;
+  background-color: white;
+  border-radius: 18px;
   margin: 0 auto;
   margin-top: 80px;
 
@@ -34,6 +16,6 @@
     font-family: "Montserrat";
     font-weight: 700;
     padding: 24px 20px;
-    border-bottom: 1px solid white;
+    border-bottom: 2px solid #eee;
   }
 }
