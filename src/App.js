@@ -1,29 +1,48 @@
-import React, { useCallback, useRef } from "react";
+import React, { useReducer, useCallback, useRef } from "react";
 import TodoInsert from "./components/TodoInsert";
 import TodoTemplate from "./components/TodoTemplate";
 import TodoList from "./components/TodoList";
-import { useState } from "react";
 
-const App = () => {
-  const [todos, setTodos] = useState([
+
+function todoExample () {
+  const array = [
     {
-      id: 1,
-      text: "Buy a monthly pass",
+      id: 1, 
+      text: 'Book a restaurant',
       checked: true,
     },
-
     {
-      id: 2,
-      text: "Send a message to Kelly",
-      checked: true,
-    },
-
-    {
-      id: 3,
-      text: "Book a restuarant for Kelly's Birthday",
+      id: 2, 
+      text: 'Send an email to professor',
       checked: false,
     },
-  ]);
+    {
+      id: 3, 
+      text: 'Go to the grocery store',
+      checked: false,
+    },
+  ];
+  return array;
+}
+
+
+function todoReducer(todos, action) {
+  switch (action.type) {
+    case "INSERT":
+      return todos.concat(action.todo);
+    case "REMOVE":
+      return todos.filter((todo) => todo.id !== action.id);
+    case "TOGGLE":
+      return todos.map((todo) =>
+        todo.id === action.id ? { ...todo, checked: !todo.checked } : todo
+      );
+    default:
+      return todos;
+  }
+}
+
+const App = () => {
+  const [todos, dispatch] = useReducer(todoReducer, undefined, todoExample);
 
   const nextId = useRef(4);
 
@@ -34,28 +53,24 @@ const App = () => {
         text: text,
         checked: false,
       };
-      setTodos(todos.concat(todo));
-      nextId.current += 1;
+      dispatch({type: 'INSERT', todo})
     },
-    [todos]
+    []
   );
 
   const onRemove = useCallback(
     (id) => {
-      setTodos(todos.filter((todo) => todo.id !== id));
+      dispatch({type: 'REMOVE', id})
     },
-    [todos]
+    []
   );
 
   const onToggle = useCallback(
-    id => {
-      setTodos(
-        todos.map(todo => 
-        todo.id === id ? {...todo, checked: !todo.checked} : todo,
-      ))
+    (id) => {
+      dispatch({type: 'TOGGLE', id})
     },
-    [todos],
-  )
+    []
+  );
 
   return (
     <>
