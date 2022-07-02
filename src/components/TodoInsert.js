@@ -5,7 +5,7 @@ const TodoInsert = () => {
   return (
     <div>
       <form className="TodoInsert">
-        <input type="text" placeholder="할 일을 입력하세요" />
+        <input type="text" placeholder="Insert here" />
         <button type="submit">
           <MdAdd></MdAdd>
         </button>

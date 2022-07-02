@@ -1,19 +1,22 @@
 import React from "react";
-import TodoTemplate from "./components/TodoTemplate";
 import TodoInsert from "./components/TodoInsert";
-import TodoList from "./components/TodoList";
-
-
+import TodoTemplate from "./components/TodoTemplate";
+import TodoList from './components/TodoList'
 
 
 const App = () => {
-  
+
+
+
+
 
   return (
-    <TodoTemplate>
-      <TodoInsert/>
-      <TodoList/>
-    </TodoTemplate>
+    <>
+      <TodoTemplate>
+        <TodoInsert></TodoInsert>
+        <TodoList></TodoList>
+      </TodoTemplate>
+    </>
   );
 };
 

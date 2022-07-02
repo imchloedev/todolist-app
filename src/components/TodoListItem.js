@@ -12,7 +12,7 @@ const TodoListItem = () => {
       <div className='checkbox'>
         <MdCheckBoxOutlineBlank/>
         <div className='text'>
-          할일
+          Tasks
         </div>
       </div>
       <div className='remove'>
