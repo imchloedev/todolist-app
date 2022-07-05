@@ -17,7 +17,7 @@ function todoExample() {
     },
     {
       id: 3,
-      text: "Go to the grocery store",
+      text: "Stop by the grocery store",
       checked: false,
     },
   ];

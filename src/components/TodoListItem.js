@@ -19,7 +19,9 @@ const TodoListItem = ({todo, onRemove, onToggle}) => {
     <div className='TodoListItem'>
       <div className={cn('checkbox', {checked})} onClick={() => onToggle(id)}>
         {checked ? <MdCheckBox/> : <MdCheckBoxOutlineBlank/> }
-        <div className='text'>
+        <div className='text' style={{ 
+          textDecoration: checked ? 'line-through' : 'none',
+          color: checked ? 'lightgray' : 'black' }}>
           {text}
           </div>
       </div>
