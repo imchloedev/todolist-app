@@ -18,8 +18,8 @@
 1. 잦은 렌더링 문제
 
 **Solution**
-1. props가 바뀌지 않으면 리렌더링이 진행되지 않게 React.memo를 사용한다. 
-2. Todolistitem 에 리액트 메모 사용 —> prop인 todo, onRemove, onToggle 바뀌지 않으면 렌더링 되지 않는다.
+1. props가 바뀌지 않으면 리렌더링이 진행되지 않게 React.memo를 사용. 
+2. Todolistitem 에 리액트 메모 사용 —> prop인 todo, onRemove, onToggle 바뀌지 않으면 리렌더링 되지 않음.
 
 ---
 
