@@ -20,7 +20,7 @@ const TodoInsert = ({onInsert}) => {
   return (
     <div>
       <form className="TodoInsert" onSubmit={onSubmit}>
-        <input type="text" placeholder="Insert here" value={value} onChange={onChange} />
+        <input type="text" required placeholder="Insert here" value={value} onChange={onChange} />
         <button type="submit">
           <MdAdd></MdAdd>
         </button>
