@@ -10,9 +10,9 @@
 **Solution**
 1. 컴포넌트 태그 사이의 내용을 보여주는 props을 사용하지 않아서 생기는 오류로 확인.
 2. TodoTemplate 컴포넌트에 props로 { children }을 전달해 줌 
-   
-   
-   
+
+<hr/>
+
 #### 2022/07/03
 **Issues**
 1. 잦은 렌더링 문제
@@ -20,9 +20,9 @@
 **Solution**
 1. props가 바뀌지 않으면 리렌더링이 진행되지 않게 React.memo를 사용한다. 
 2. Todolistitem 에 리액트 메모 사용 —> prop인 todo, onRemove, onToggle 바뀌지 않으면 렌더링 되지 않는다.
-   
-   
-   
+
+<hr/>
+
 #### 2022/07/05
 **Issues**
 1. key 값 즉 id 값을 useReducer로 사용하면서 오류 발생 
